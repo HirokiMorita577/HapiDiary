@@ -1,0 +1,2529 @@
+{
+  "major_categories": [
+    "からだ・感覚",
+    "暮らし・日常",
+    "趣味・好奇心",
+    "自然・季節",
+    "人とのかかわり",
+    "自分・前進"
+  ],
+  "mute_themes": [
+    "妊娠・出産",
+    "恋愛・結婚",
+    "病気・介護",
+    "仕事・昇進"
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "major": "からだ・感覚",
+      "name": "食べる",
+      "subgenres": [
+        {
+          "name": "朝ごはん",
+          "description": "一日の始まりの食事がおいしかった",
+          "example": "焼きたてのトーストにバターがじゅわっと染みた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "朝ごはん",
+            "朝食",
+            "トースト",
+            "納豆",
+            "味噌汁",
+            "目玉焼き"
+          ]
+        },
+        {
+          "name": "外食・グルメ",
+          "description": "お店の料理を味わった",
+          "example": "気になっていたラーメン屋にやっと行けた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "外食",
+            "ランチ",
+            "ディナー",
+            "レストラン",
+            "ラーメン",
+            "定食",
+            "グルメ"
+          ]
+        },
+        {
+          "name": "おやつ・甘いもの",
+          "description": "甘いものやお菓子でひと息ついた",
+          "example": "コンビニの新作スイーツが当たりだった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "おやつ",
+            "スイーツ",
+            "ケーキ",
+            "チョコ",
+            "アイス",
+            "甘いもの",
+            "お菓子"
+          ]
+        },
+        {
+          "name": "手料理",
+          "description": "自分や家族が作った料理がうまくいった",
+          "example": "はじめて作った煮物の味が決まった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "手料理",
+            "自炊",
+            "作った",
+            "レシピ",
+            "煮物",
+            "炒め",
+            "キッチン"
+          ]
+        },
+        {
+          "name": "旬の味覚",
+          "description": "季節の食材を楽しんだ",
+          "example": "初物のさんまが香ばしくて秋を感じた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "旬",
+            "初物",
+            "さんま",
+            "たけのこ",
+            "いちご",
+            "新米",
+            "季節の"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "major": "からだ・感覚",
+      "name": "飲む",
+      "subgenres": [
+        {
+          "name": "コーヒー・紅茶",
+          "description": "淹れた一杯でほっとした",
+          "example": "豆から挽いたコーヒーの香りで目が覚めた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "コーヒー",
+            "珈琲",
+            "紅茶",
+            "カフェラテ",
+            "ドリップ",
+            "エスプレッソ"
+          ]
+        },
+        {
+          "name": "お茶時間",
+          "description": "お茶を飲んでゆっくりした",
+          "example": "縁側で緑茶をすすったら肩の力が抜けた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "お茶",
+            "緑茶",
+            "ほうじ茶",
+            "ティータイム",
+            "急須",
+            "湯のみ"
+          ]
+        },
+        {
+          "name": "お酒・晩酌",
+          "description": "お酒でくつろいだ",
+          "example": "一日の終わりのビールがしみた",
+          "sensitive": true,
+          "mute_theme": null,
+          "keywords": [
+            "お酒",
+            "ビール",
+            "晩酌",
+            "日本酒",
+            "ワイン",
+            "ハイボール",
+            "乾杯"
+          ]
+        },
+        {
+          "name": "水・のどごし",
+          "description": "冷たい水や炭酸で満たされた",
+          "example": "運動の後の炭酸水が体に染みわたった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "水",
+            "炭酸水",
+            "のどごし",
+            "冷たい",
+            "麦茶",
+            "白湯"
+          ]
+        },
+        {
+          "name": "ご当地ドリンク",
+          "description": "その土地ならではの飲み物を味わった",
+          "example": "旅先で見つけた地サイダーが懐かしい味だった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ご当地",
+            "地サイダー",
+            "ラムネ",
+            "旅先",
+            "名産",
+            "限定"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "major": "からだ・感覚",
+      "name": "眠る・休む",
+      "subgenres": [
+        {
+          "name": "よく眠れた",
+          "description": "ぐっすり眠って体が軽い",
+          "example": "久しぶりに朝までぐっすりで頭がすっきりした",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "よく眠れた",
+            "ぐっすり",
+            "熟睡",
+            "睡眠",
+            "寝起き",
+            "すっきり"
+          ]
+        },
+        {
+          "name": "昼寝",
+          "description": "短い昼寝で回復した",
+          "example": "昼休みに15分だけ目を閉じたら午後がはかどった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "昼寝",
+            "仮眠",
+            "うたた寝",
+            "ソファ",
+            "まどろみ"
+          ]
+        },
+        {
+          "name": "寝具の心地よさ",
+          "description": "布団やまくらが気持ちよかった",
+          "example": "干したての布団がふかふかで太陽の匂いがした",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "布団",
+            "まくら",
+            "シーツ",
+            "毛布",
+            "ふかふか",
+            "寝具"
+          ]
+        },
+        {
+          "name": "休日の朝寝坊",
+          "description": "時間を気にせず眠れた",
+          "example": "アラームを止めてもう一度眠れる休日の朝",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "朝寝坊",
+            "二度寝",
+            "休日の朝",
+            "ゆっくり起きた"
+          ]
+        },
+        {
+          "name": "何もしない時間",
+          "description": "予定のない時間でぼんやりできた",
+          "example": "何もせずに天井を眺める時間が贅沢に感じた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "何もしない",
+            "ぼんやり",
+            "だらだら",
+            "ゆるむ",
+            "休息"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "major": "からだ・感覚",
+      "name": "お風呂・温泉",
+      "subgenres": [
+        {
+          "name": "温泉・銭湯",
+          "description": "湯につかってほぐれた",
+          "example": "露天風呂で足を伸ばしたら疲れが溶けていった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "温泉",
+            "銭湯",
+            "露天風呂",
+            "湯",
+            "大浴場",
+            "ととのう"
+          ]
+        },
+        {
+          "name": "長風呂・半身浴",
+          "description": "ゆっくり湯船で温まった",
+          "example": "本を持ち込んで半身浴、じんわり汗をかいた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "長風呂",
+            "半身浴",
+            "湯船",
+            "バスタイム",
+            "温まった"
+          ]
+        },
+        {
+          "name": "入浴剤・香り",
+          "description": "香りや色で癒された",
+          "example": "ラベンダーの入浴剤で浴室がいい香りになった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "入浴剤",
+            "バスソルト",
+            "香り",
+            "泡風呂",
+            "アロマ"
+          ]
+        },
+        {
+          "name": "サウナ・整う",
+          "description": "サウナと水風呂で整った",
+          "example": "サウナのあとの外気浴で頭が空っぽになった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "サウナ",
+            "水風呂",
+            "外気浴",
+            "整った",
+            "ロウリュ"
+          ]
+        },
+        {
+          "name": "足湯",
+          "description": "足だけ温めてほっとした",
+          "example": "駅前の足湯で歩き疲れた足がじんわり軽くなった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "足湯",
+            "足元",
+            "ぽかぽか",
+            "足浴"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "major": "からだ・感覚",
+      "name": "心地よい感覚",
+      "subgenres": [
+        {
+          "name": "肌ざわり",
+          "description": "手ざわりの良いものにふれた",
+          "example": "新しいタオルがふわふわで頬ずりしたくなった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "肌ざわり",
+            "手ざわり",
+            "ふわふわ",
+            "もこもこ",
+            "なめらか",
+            "タオル"
+          ]
+        },
+        {
+          "name": "良い香り",
+          "description": "好きな匂いに包まれた",
+          "example": "すれ違った金木犀の香りで足が止まった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "香り",
+            "匂い",
+            "アロマ",
+            "金木犀",
+            "柔軟剤",
+            "いい匂い"
+          ]
+        },
+        {
+          "name": "心地よい音",
+          "description": "耳に心地よい音に癒された",
+          "example": "雨音を聞きながらの読書がはかどった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "音",
+            "雨音",
+            "波の音",
+            "焚き火",
+            "環境音",
+            "静けさ"
+          ]
+        },
+        {
+          "name": "日なたぼっこ",
+          "description": "日ざしのあたたかさを感じた",
+          "example": "窓辺の陽だまりで猫と一緒にうとうとした",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "日なたぼっこ",
+            "陽だまり",
+            "日ざし",
+            "ぽかぽか",
+            "窓辺"
+          ]
+        },
+        {
+          "name": "マッサージ・ストレッチ",
+          "description": "体をほぐして楽になった",
+          "example": "肩を回してストレッチしたら視界まで明るくなった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "マッサージ",
+            "ストレッチ",
+            "ほぐす",
+            "肩こり",
+            "整体",
+            "伸び"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "major": "暮らし・日常",
+      "name": "家時間",
+      "subgenres": [
+        {
+          "name": "模様替え",
+          "description": "部屋の配置を変えて気分が変わった",
+          "example": "机の向きを窓側にしたら部屋が広く感じた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "模様替え",
+            "レイアウト",
+            "配置",
+            "インテリア",
+            "部屋づくり"
+          ]
+        },
+        {
+          "name": "お気に入りの場所",
+          "description": "家の中の定位置で落ち着いた",
+          "example": "窓際の椅子が自分だけの特等席になっている",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "お気に入りの場所",
+            "定位置",
+            "特等席",
+            "居場所",
+            "椅子"
+          ]
+        },
+        {
+          "name": "部屋の明かり",
+          "description": "照明の雰囲気に癒された",
+          "example": "間接照明に切り替えたら部屋がぐっと落ち着いた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "照明",
+            "明かり",
+            "間接照明",
+            "ランプ",
+            "キャンドル",
+            "灯り"
+          ]
+        },
+        {
+          "name": "ひとりの静けさ",
+          "description": "静かな家で心が凪いだ",
+          "example": "誰もいない部屋で聞こえるのは時計の音だけ",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "静けさ",
+            "静か",
+            "しずけさ",
+            "ひとりの家",
+            "無音"
+          ]
+        },
+        {
+          "name": "季節の設え",
+          "description": "季節の飾りつけを楽しんだ",
+          "example": "玄関に小さな秋の実を飾ったら気分が上がった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "設え",
+            "飾り",
+            "しつらえ",
+            "季節の飾り",
+            "花を生けた"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "major": "暮らし・日常",
+      "name": "家事が整う",
+      "subgenres": [
+        {
+          "name": "洗濯物が乾いた",
+          "description": "洗濯がうまくいって気持ちいい",
+          "example": "晴れた日にシーツまで洗えて全部乾いた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "洗濯",
+            "乾いた",
+            "洗濯物",
+            "干した",
+            "取り込んだ",
+            "ふっくら"
+          ]
+        },
+        {
+          "name": "水回りがピカピカ",
+          "description": "掃除して清潔になった",
+          "example": "シンクを磨いたら水滴までキラキラして見えた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "水回り",
+            "シンク",
+            "ピカピカ",
+            "掃除",
+            "磨いた",
+            "排水口"
+          ]
+        },
+        {
+          "name": "冷蔵庫の整理",
+          "description": "食材やストックが整った",
+          "example": "冷蔵庫を整理したら奥から使い忘れが出てこなくなった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "冷蔵庫",
+            "整理",
+            "作り置き",
+            "在庫",
+            "食材",
+            "収納"
+          ]
+        },
+        {
+          "name": "床がすっきり",
+          "description": "床や部屋が片付いた",
+          "example": "床のものを全部片付けたら掃除機がスイスイかけられた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "床",
+            "片付け",
+            "すっきり",
+            "掃除機",
+            "床拭き",
+            "ものを減らした"
+          ]
+        },
+        {
+          "name": "名もなき家事完了",
+          "description": "細かい家事を片付けた",
+          "example": "溜まっていた分別ゴミをやっと全部出せた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "名もなき家事",
+            "ゴミ出し",
+            "分別",
+            "詰め替え",
+            "電池交換",
+            "こまごま"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "major": "暮らし・日常",
+      "name": "買い物",
+      "subgenres": [
+        {
+          "name": "掘り出し物",
+          "description": "思いがけない良い品に出会った",
+          "example": "古着屋で好みど真ん中のシャツを見つけた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "掘り出し物",
+            "見つけた",
+            "古着",
+            "セール",
+            "お得",
+            "一目ぼれ"
+          ]
+        },
+        {
+          "name": "日用品の補充",
+          "description": "必要なものをそろえられた",
+          "example": "切らしていた洗剤をまとめて補充できて安心した",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "日用品",
+            "補充",
+            "ストック",
+            "詰め替え",
+            "買い足し",
+            "消耗品"
+          ]
+        },
+        {
+          "name": "お気に入りブランド",
+          "description": "好きなお店やブランドで買えた",
+          "example": "ずっと欲しかったブランドの定番を思いきって買った",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ブランド",
+            "お気に入り",
+            "定番",
+            "念願",
+            "買えた"
+          ]
+        },
+        {
+          "name": "まとめ買い成功",
+          "description": "計画的に買い物ができた",
+          "example": "献立を決めてから行ったら無駄なく買い物が終わった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "まとめ買い",
+            "計画",
+            "献立",
+            "買い出し",
+            "節約",
+            "リスト"
+          ]
+        },
+        {
+          "name": "ウィンドウショッピング",
+          "description": "見て回るだけで楽しかった",
+          "example": "買わなくても店内をぐるっと見て回るだけで満たされた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ウィンドウショッピング",
+            "見て回る",
+            "ぶらぶら",
+            "ショッピング",
+            "冷やかし"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "major": "暮らし・日常",
+      "name": "移動・散歩",
+      "subgenres": [
+        {
+          "name": "近所の散歩",
+          "description": "家のまわりを歩いて気分転換した",
+          "example": "いつもと違う路地に入ったら小さな公園を見つけた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "散歩",
+            "近所",
+            "歩いた",
+            "路地",
+            "ぶらり",
+            "お散歩"
+          ]
+        },
+        {
+          "name": "通勤・通学の景色",
+          "description": "行き帰りの道でいいものを見た",
+          "example": "通勤電車から見えた朝の川がきらきらしていた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "通勤",
+            "通学",
+            "行き帰り",
+            "道すがら",
+            "車窓",
+            "いつもの道"
+          ]
+        },
+        {
+          "name": "自転車がきもちいい",
+          "description": "自転車で走って爽快だった",
+          "example": "下り坂で風を切ったら思わず声が出た",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "自転車",
+            "チャリ",
+            "サイクリング",
+            "風を切",
+            "ペダル"
+          ]
+        },
+        {
+          "name": "電車の車窓",
+          "description": "移動中の眺めを楽しんだ",
+          "example": "各駅停車の窓から見る田んぼがずっと緑だった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "電車",
+            "車窓",
+            "各駅停車",
+            "ローカル線",
+            "車内",
+            "旅気分"
+          ]
+        },
+        {
+          "name": "寄り道",
+          "description": "予定外の立ち寄りが楽しかった",
+          "example": "帰り道にふらっと寄った本屋で長居してしまった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "寄り道",
+            "ふらっと",
+            "立ち寄",
+            "回り道",
+            "遠回り"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "major": "暮らし・日常",
+      "name": "小さな達成",
+      "subgenres": [
+        {
+          "name": "ToDo完了",
+          "description": "やることリストを片付けた",
+          "example": "先延ばしにしていた手続きをやっと終わらせた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "todo",
+            "やること",
+            "リスト",
+            "片付けた",
+            "終わらせた",
+            "こなした"
+          ]
+        },
+        {
+          "name": "早起きできた",
+          "description": "いつもより早く動けた",
+          "example": "30分早く起きただけで朝がこんなに静かなんだと知った",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "早起き",
+            "早く起きた",
+            "朝活",
+            "目覚め",
+            "早朝"
+          ]
+        },
+        {
+          "name": "片付けが終わった",
+          "description": "気になっていた場所を整理した",
+          "example": "クローゼットを全部出して見直したらすっきりした",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "片付け",
+            "整理",
+            "断捨離",
+            "クローゼット",
+            "収納",
+            "手放した"
+          ]
+        },
+        {
+          "name": "手続きが済んだ",
+          "description": "面倒な用事を完了させた",
+          "example": "役所の手続きが一回で済んでほっとした",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "手続き",
+            "役所",
+            "申請",
+            "提出",
+            "済んだ",
+            "書類"
+          ]
+        },
+        {
+          "name": "目標の一歩",
+          "description": "続けたいことに一歩踏み出した",
+          "example": "毎日ノート1ページ、今日で7日続いた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "一歩",
+            "続いた",
+            "習慣",
+            "継続",
+            "はじめた",
+            "コツコツ"
+          ]
+        },
+        {
+          "name": "やりくり・節約できた",
+          "description": "予算内でおさめた、うまく節約できた、家計が整った",
+          "example": "今月は使いすぎず、少し貯金に回せた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "節約",
+            "やりくり",
+            "予算内",
+            "家計",
+            "貯金",
+            "ポイント",
+            "セールで",
+            "支出を抑え",
+            "無駄遣いしなかった"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "major": "趣味・好奇心",
+      "name": "音楽・映像",
+      "subgenres": [
+        {
+          "name": "好きな曲",
+          "description": "音楽で心が動いた",
+          "example": "通勤中に流れた曲のサビで泣きそうになった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "曲",
+            "音楽",
+            "プレイリスト",
+            "サビ",
+            "歌詞",
+            "イヤホン"
+          ]
+        },
+        {
+          "name": "ライブ・フェス",
+          "description": "生の演奏やイベントに行った",
+          "example": "初めてのライブで音の振動を体で浴びた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ライブ",
+            "フェス",
+            "コンサート",
+            "会場",
+            "アンコール",
+            "参戦"
+          ]
+        },
+        {
+          "name": "映画鑑賞",
+          "description": "映画を観て満たされた",
+          "example": "夜中に観た一本が刺さって余韻で眠れなかった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "映画",
+            "鑑賞",
+            "劇場",
+            "シネマ",
+            "エンドロール",
+            "作品"
+          ]
+        },
+        {
+          "name": "ドラマ・アニメ",
+          "description": "続きものの物語を楽しんだ",
+          "example": "気になっていたアニメを一気見してしまった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ドラマ",
+            "アニメ",
+            "一気見",
+            "配信",
+            "最終回",
+            "続き"
+          ]
+        },
+        {
+          "name": "作業用BGM",
+          "description": "ながら聴きで気分よく過ごした",
+          "example": "作業用のジャズを流したら集中が続いた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "作業用",
+            "bgm",
+            "ながら",
+            "ジャズ",
+            "ラジオ",
+            "podcast",
+            "ポッドキャスト"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "major": "趣味・好奇心",
+      "name": "読書・学び",
+      "subgenres": [
+        {
+          "name": "小説に没頭",
+          "description": "物語の世界に入り込んだ",
+          "example": "続きが気になって気づいたら夜が明けていた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "小説",
+            "読書",
+            "本",
+            "物語",
+            "没頭",
+            "ページ"
+          ]
+        },
+        {
+          "name": "学びのメモ",
+          "description": "知ったことを書き留めた",
+          "example": "気になった言葉をノートにまとめたら頭が整理された",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "メモ",
+            "ノート",
+            "まとめた",
+            "学び",
+            "気づき",
+            "書き留め"
+          ]
+        },
+        {
+          "name": "資格・勉強",
+          "description": "勉強がはかどった",
+          "example": "苦手だった単元がやっと解けるようになった",
+          "sensitive": true,
+          "mute_theme": "仕事・昇進",
+          "keywords": [
+            "資格",
+            "勉強",
+            "試験",
+            "過去問",
+            "参考書",
+            "合格"
+          ]
+        },
+        {
+          "name": "図書館・本屋",
+          "description": "本のある場所で過ごした",
+          "example": "図書館の静けさの中で3時間があっという間だった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "図書館",
+            "本屋",
+            "書店",
+            "蔵書",
+            "棚",
+            "背表紙"
+          ]
+        },
+        {
+          "name": "知的好奇心",
+          "description": "新しいことを知ってわくわくした",
+          "example": "何気なく調べた歴史の話が面白くて脱線が止まらない",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "知的好奇心",
+            "調べた",
+            "雑学",
+            "なるほど",
+            "面白い話",
+            "解説"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "major": "趣味・好奇心",
+      "name": "ゲーム・遊び",
+      "subgenres": [
+        {
+          "name": "クリアした",
+          "description": "ゲームをやり遂げた",
+          "example": "3年積んでいたゲームをついにエンディングまで進めた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "クリア",
+            "エンディング",
+            "攻略",
+            "ラスボス",
+            "実績",
+            "やり遂げ"
+          ]
+        },
+        {
+          "name": "オンラインで交流",
+          "description": "誰かと一緒に遊べた",
+          "example": "フレンドと深夜まで協力プレイで盛り上がった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "オンライン",
+            "協力プレイ",
+            "マルチ",
+            "フレンド",
+            "ボイスチャット",
+            "パーティ"
+          ]
+        },
+        {
+          "name": "ボードゲーム",
+          "description": "対面のゲームで盛り上がった",
+          "example": "友人と集まってボードゲームで笑い転げた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ボードゲーム",
+            "カードゲーム",
+            "テーブルゲーム",
+            "対戦",
+            "コマ"
+          ]
+        },
+        {
+          "name": "レトロゲーム",
+          "description": "懐かしいゲームを楽しんだ",
+          "example": "昔のRPGを引っぱり出したら音楽だけで泣けた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "レトロゲーム",
+            "昔のゲーム",
+            "名作",
+            "懐かしい",
+            "レトロ"
+          ]
+        },
+        {
+          "name": "気軽な暇つぶし",
+          "description": "スキマ時間に軽く遊んだ",
+          "example": "電車待ちのパズルゲームで小さく達成感を得た",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "暇つぶし",
+            "スキマ",
+            "パズル",
+            "スマホゲーム",
+            "ミニゲーム"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "major": "趣味・好奇心",
+      "name": "ものづくり",
+      "subgenres": [
+        {
+          "name": "手芸・工作",
+          "description": "手を動かして何かを作った",
+          "example": "編みかけのマフラーがやっと片方完成した",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "手芸",
+            "工作",
+            "編み物",
+            "刺繍",
+            "ハンドメイド",
+            "手作り"
+          ]
+        },
+        {
+          "name": "DIY",
+          "description": "自分で直したり作ったりした",
+          "example": "ぐらついていた棚を自分で補強できた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "diy",
+            "日曜大工",
+            "組み立て",
+            "補強",
+            "自作",
+            "工具"
+          ]
+        },
+        {
+          "name": "絵・イラスト",
+          "description": "絵を描いて満足した",
+          "example": "落書きのつもりが思ったより良く描けて嬉しい",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "絵",
+            "イラスト",
+            "スケッチ",
+            "落書き",
+            "デッサン",
+            "描いた"
+          ]
+        },
+        {
+          "name": "写真",
+          "description": "写真を撮って残した",
+          "example": "何気なく撮った空の写真がお気に入りの一枚になった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "写真",
+            "撮影",
+            "カメラ",
+            "一枚",
+            "シャッター",
+            "スナップ"
+          ]
+        },
+        {
+          "name": "文章を書く",
+          "description": "書くことで気持ちが整った",
+          "example": "日記を書き終えたら今日一日が愛おしく思えた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "文章",
+            "書いた",
+            "日記",
+            "ブログ",
+            "執筆",
+            "言葉にした"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "major": "趣味・好奇心",
+      "name": "推し・収集",
+      "subgenres": [
+        {
+          "name": "推し活",
+          "description": "推しの活動を追えて幸せだった",
+          "example": "推しの新曲が公開されて朝から気分が晴れやかだ",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "推し",
+            "推し活",
+            "オタ活",
+            "担当",
+            "尊い",
+            "供給"
+          ]
+        },
+        {
+          "name": "グッズ集め",
+          "description": "欲しかったグッズを手に入れた",
+          "example": "抽選に外し続けたグッズをやっと譲ってもらえた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "グッズ",
+            "コレクション",
+            "缶バッジ",
+            "アクスタ",
+            "限定",
+            "特典"
+          ]
+        },
+        {
+          "name": "コレクション整理",
+          "description": "集めたものを並べて眺めた",
+          "example": "棚に並べたフィギュアを整理したらにやにやが止まらない",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "コレクション",
+            "整理",
+            "並べた",
+            "飾った",
+            "棚",
+            "コンプ"
+          ]
+        },
+        {
+          "name": "イベント参戦",
+          "description": "イベントに足を運んだ",
+          "example": "遠征して参加したイベントで同じ趣味の熱気に包まれた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "イベント",
+            "参戦",
+            "遠征",
+            "現場",
+            "会場",
+            "物販"
+          ]
+        },
+        {
+          "name": "同じ趣味の仲間",
+          "description": "好きなものを語り合えた",
+          "example": "初対面でも推しの話で何時間でも盛り上がれた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "仲間",
+            "同担",
+            "語り合",
+            "布教",
+            "共有",
+            "オフ会"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "major": "自然・季節",
+      "name": "空・天気",
+      "subgenres": [
+        {
+          "name": "青空",
+          "description": "澄んだ空を見上げた",
+          "example": "洗濯物を干す手を止めて、ただ青い空を見上げた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "青空",
+            "快晴",
+            "空が青い",
+            "雲ひとつ",
+            "晴れ"
+          ]
+        },
+        {
+          "name": "夕焼け",
+          "description": "夕暮れの色に見とれた",
+          "example": "帰り道の空がオレンジから紫へ移っていくのを眺めた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "夕焼け",
+            "夕暮れ",
+            "夕日",
+            "茜色",
+            "マジックアワー",
+            "日没"
+          ]
+        },
+        {
+          "name": "星空・月",
+          "description": "夜空の星や月を楽しんだ",
+          "example": "ベランダから見上げたら思ったより星が見えた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "星空",
+            "星",
+            "月",
+            "満月",
+            "天の川",
+            "夜空"
+          ]
+        },
+        {
+          "name": "雨の匂い",
+          "description": "雨の日ならではの空気を感じた",
+          "example": "降り出す前の土の匂いで夕立が来ると分かった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "雨の匂い",
+            "雨上がり",
+            "しっとり",
+            "土の匂い",
+            "雨の日"
+          ]
+        },
+        {
+          "name": "虹",
+          "description": "虹を見つけた",
+          "example": "信号待ちでふと横を見たら薄い虹がかかっていた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "虹",
+            "にじ",
+            "半円",
+            "雨上がりの空",
+            "アーチ"
+          ]
+        },
+        {
+          "name": "風・そよ風",
+          "description": "心地よい風を感じた",
+          "example": "帰り道にちょうどいい風が吹いて、少し立ち止まった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "風",
+            "そよ風",
+            "風が気持ち",
+            "涼しい風",
+            "微風",
+            "風にあたる",
+            "風が通"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "major": "自然・季節",
+      "name": "植物・花",
+      "subgenres": [
+        {
+          "name": "ベランダ菜園",
+          "description": "育てている野菜やハーブが実った",
+          "example": "プランターのミニトマトが一つだけ赤くなった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ベランダ菜園",
+            "プランター",
+            "家庭菜園",
+            "収穫",
+            "苗",
+            "水やり"
+          ]
+        },
+        {
+          "name": "花が咲いた",
+          "description": "花の開花に立ち会えた",
+          "example": "水栽培のヒヤシンスがついに一輪ほどけた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "花が咲いた",
+            "開花",
+            "つぼみ",
+            "一輪",
+            "満開",
+            "花壇"
+          ]
+        },
+        {
+          "name": "観葉植物",
+          "description": "室内の緑に癒された",
+          "example": "新しい葉が一枚出ているのに気づいて朝から嬉しい",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "観葉植物",
+            "グリーン",
+            "新芽",
+            "鉢植え",
+            "多肉",
+            "葉っぱ"
+          ]
+        },
+        {
+          "name": "道端の草花",
+          "description": "何気ない植物に目がとまった",
+          "example": "アスファルトの隙間で咲いているタンポポに元気をもらった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "道端",
+            "草花",
+            "雑草",
+            "タンポポ",
+            "野の花",
+            "路傍"
+          ]
+        },
+        {
+          "name": "紅葉・新緑",
+          "description": "季節の木々の色を楽しんだ",
+          "example": "並木道の新緑が朝日で透けてまぶしかった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "紅葉",
+            "新緑",
+            "並木",
+            "落ち葉",
+            "木漏れ日",
+            "色づいた"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "major": "自然・季節",
+      "name": "動物",
+      "subgenres": [
+        {
+          "name": "犬とふれあい",
+          "description": "犬とふれあって和んだ",
+          "example": "散歩中の柴犬がしっぽを振って寄ってきてくれた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "犬",
+            "わんこ",
+            "柴犬",
+            "散歩中",
+            "しっぽ",
+            "ふれあい"
+          ]
+        },
+        {
+          "name": "猫とのんびり",
+          "description": "猫とゆったり過ごした",
+          "example": "膝に乗ってきた猫が動けなくなるやつをやられた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "猫",
+            "ねこ",
+            "にゃんこ",
+            "ゴロゴロ",
+            "膝の上",
+            "肉球"
+          ]
+        },
+        {
+          "name": "野鳥観察",
+          "description": "鳥のようすを眺めた",
+          "example": "電線に並んだ雀を数えていたら遅刻しかけた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "野鳥",
+            "鳥",
+            "すずめ",
+            "さえずり",
+            "巣",
+            "羽づくろい"
+          ]
+        },
+        {
+          "name": "水族館・動物園",
+          "description": "施設で生きものを見た",
+          "example": "ペンギンがよちよち歩く姿を1時間見ていた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "水族館",
+            "動物園",
+            "ペンギン",
+            "水槽",
+            "餌やり",
+            "展示"
+          ]
+        },
+        {
+          "name": "生きものの仕草",
+          "description": "小さな生きものの動きに癒された",
+          "example": "窓についたヤモリが同じポーズのまま夜を過ごしていた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "仕草",
+            "生きもの",
+            "ヤモリ",
+            "リス",
+            "小動物",
+            "しぐさ"
+          ]
+        },
+        {
+          "name": "うちの子（ペット）",
+          "description": "一緒に暮らす動物との時間に癒された",
+          "example": "帰宅したら玄関まで迎えに来てくれて、その日の疲れが飛んだ",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "うちの子",
+            "ペット",
+            "飼っている",
+            "うちの犬",
+            "うちの猫",
+            "お迎え",
+            "甘えてきた",
+            "膝に乗"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "major": "自然・季節",
+      "name": "季節の変化",
+      "subgenres": [
+        {
+          "name": "春の兆し",
+          "description": "春の気配を感じた",
+          "example": "コートを一枚脱いで歩けた日、風がやわらかかった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "春",
+            "春めいた",
+            "つくし",
+            "梅",
+            "花粉",
+            "あたたかく"
+          ]
+        },
+        {
+          "name": "夏の夕立",
+          "description": "夏らしい空気を味わった",
+          "example": "夕立のあと、ひぐらしの声で少し涼しくなった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "夏",
+            "夕立",
+            "セミ",
+            "打ち水",
+            "風鈴",
+            "涼"
+          ]
+        },
+        {
+          "name": "秋の涼しさ",
+          "description": "秋の心地よさを感じた",
+          "example": "窓を開けたら金木犀の香りと涼しい風が入ってきた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "秋",
+            "涼しい",
+            "金木犀",
+            "衣替え",
+            "夜長",
+            "肌寒い"
+          ]
+        },
+        {
+          "name": "冬の澄んだ空気",
+          "description": "冬の空気の清々しさを感じた",
+          "example": "早朝の冷たい空気で背筋がしゃんとした",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "冬",
+            "澄んだ空気",
+            "霜",
+            "白い息",
+            "こたつ",
+            "冷え"
+          ]
+        },
+        {
+          "name": "季節の行事",
+          "description": "行事や節目を楽しんだ",
+          "example": "小さくても豆まきをしたら一年の区切りを感じた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "行事",
+            "節分",
+            "七夕",
+            "お月見",
+            "年越し",
+            "節目"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "major": "自然・季節",
+      "name": "旅・景色",
+      "subgenres": [
+        {
+          "name": "絶景に出会う",
+          "description": "見晴らしのよい景色に感動した",
+          "example": "峠を越えた瞬間に海が一面に広がって声が出た",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "絶景",
+            "景色",
+            "見晴らし",
+            "パノラマ",
+            "展望",
+            "眺め"
+          ]
+        },
+        {
+          "name": "宿・滞在",
+          "description": "泊まった場所が心地よかった",
+          "example": "古民家の宿で薪ストーブの前にずっと座っていた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "宿",
+            "旅館",
+            "ホテル",
+            "民宿",
+            "チェックイン",
+            "滞在"
+          ]
+        },
+        {
+          "name": "ローカル電車",
+          "description": "のんびりした移動を楽しんだ",
+          "example": "一両編成の電車が畑の中をゆっくり進んでいった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ローカル電車",
+            "鈍行",
+            "一両",
+            "無人駅",
+            "乗り継ぎ",
+            "各停"
+          ]
+        },
+        {
+          "name": "温泉旅行",
+          "description": "旅先で湯に癒された",
+          "example": "宿の露天風呂から紅葉を眺めて長湯してしまった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "温泉旅行",
+            "湯めぐり",
+            "旅先の温泉",
+            "宿の風呂",
+            "湯治"
+          ]
+        },
+        {
+          "name": "旅の計画",
+          "description": "行き先を考える時間が楽しかった",
+          "example": "地図を広げて次の休みの行き先を選ぶのが一番楽しい",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "旅の計画",
+            "旅程",
+            "地図",
+            "行き先",
+            "予約した",
+            "しおり"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "major": "人とのかかわり",
+      "name": "家族",
+      "subgenres": [
+        {
+          "name": "家族の団らん",
+          "description": "家族と一緒の時間が心地よかった",
+          "example": "全員そろって夕飯を食べたのは久しぶりだった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "家族",
+            "団らん",
+            "夕飯",
+            "実家",
+            "みんなで",
+            "食卓"
+          ]
+        },
+        {
+          "name": "親孝行できた",
+          "description": "親に何かをしてあげられた",
+          "example": "母の肩をもんだら「上手になったね」と笑われた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "親孝行",
+            "親に",
+            "母に",
+            "父に",
+            "プレゼントした",
+            "手伝った"
+          ]
+        },
+        {
+          "name": "兄弟姉妹と",
+          "description": "きょうだいと過ごせた",
+          "example": "妹と久しぶりに長電話して声を上げて笑った",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "兄弟",
+            "姉妹",
+            "きょうだい",
+            "兄",
+            "弟",
+            "妹",
+            "姉"
+          ]
+        },
+        {
+          "name": "実家に帰る",
+          "description": "帰省してほっとした",
+          "example": "実家の匂いをかいだ瞬間に力が抜けた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "実家",
+            "帰省",
+            "里帰り",
+            "田舎",
+            "地元に帰"
+          ]
+        },
+        {
+          "name": "何気ない会話",
+          "description": "家族とのささいなやり取りが嬉しかった",
+          "example": "台所で交わした天気の話だけで心が落ち着いた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "何気ない会話",
+            "ささいな",
+            "たわいない",
+            "雑談",
+            "やり取り"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "major": "人とのかかわり",
+      "name": "子ども",
+      "subgenres": [
+        {
+          "name": "子どもの成長",
+          "description": "子どもの成長を感じた",
+          "example": "きのう言えなかった言葉を今日は言えるようになっていた",
+          "sensitive": true,
+          "mute_theme": "妊娠・出産",
+          "keywords": [
+            "子ども",
+            "こども",
+            "成長",
+            "はじめて",
+            "できるようになった",
+            "育児"
+          ]
+        },
+        {
+          "name": "一緒に遊ぶ",
+          "description": "子どもと遊んで笑った",
+          "example": "公園で鬼ごっこして本気で走ったら息が切れた",
+          "sensitive": true,
+          "mute_theme": null,
+          "keywords": [
+            "一緒に遊ぶ",
+            "公園で",
+            "鬼ごっこ",
+            "おままごと",
+            "遊んだ",
+            "子と"
+          ]
+        },
+        {
+          "name": "寝顔",
+          "description": "子どもの寝顔に癒された",
+          "example": "寝落ちした子の頬を見ていたら一日の疲れが飛んだ",
+          "sensitive": true,
+          "mute_theme": null,
+          "keywords": [
+            "寝顔",
+            "寝落ち",
+            "すやすや",
+            "抱っこ",
+            "寝かしつけ"
+          ]
+        },
+        {
+          "name": "初めてができた",
+          "description": "子どもが何かを初めてできた",
+          "example": "はじめて自分で靴をはけた日、二人でハイタッチした",
+          "sensitive": true,
+          "mute_theme": "妊娠・出産",
+          "keywords": [
+            "初めて",
+            "はじめてできた",
+            "一人で",
+            "できた瞬間",
+            "成長の記録"
+          ]
+        },
+        {
+          "name": "保育園・学校の話",
+          "description": "子どもの園や学校での話を聞けた",
+          "example": "帰ってくるなり今日あった出来事を全部話してくれた",
+          "sensitive": true,
+          "mute_theme": null,
+          "keywords": [
+            "保育園",
+            "幼稚園",
+            "学校",
+            "行事",
+            "先生",
+            "お友達"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "major": "人とのかかわり",
+      "name": "恋愛・パートナー",
+      "subgenres": [
+        {
+          "name": "デート",
+          "description": "パートナーと出かけて楽しかった",
+          "example": "特別なことはしていないのに一緒に歩くだけで楽しい",
+          "sensitive": true,
+          "mute_theme": "恋愛・結婚",
+          "keywords": [
+            "デート",
+            "彼氏",
+            "彼女",
+            "パートナー",
+            "出かけた",
+            "二人で"
+          ]
+        },
+        {
+          "name": "記念日",
+          "description": "節目の日を一緒に過ごせた",
+          "example": "付き合った日を覚えていてくれて小さなケーキを用意していた",
+          "sensitive": true,
+          "mute_theme": "恋愛・結婚",
+          "keywords": [
+            "記念日",
+            "アニバーサリー",
+            "◯周年",
+            "プレゼント",
+            "サプライズ"
+          ]
+        },
+        {
+          "name": "何気ない優しさ",
+          "description": "相手のさりげない気づかいが嬉しかった",
+          "example": "疲れて帰ったら黙って温かいお茶が出てきた",
+          "sensitive": true,
+          "mute_theme": "恋愛・結婚",
+          "keywords": [
+            "優しさ",
+            "気づかい",
+            "さりげない",
+            "してくれた",
+            "察してくれた"
+          ]
+        },
+        {
+          "name": "遠距離で会えた",
+          "description": "会えない相手にやっと会えた",
+          "example": "3ヶ月ぶりに改札で顔を見た瞬間、走り出していた",
+          "sensitive": true,
+          "mute_theme": "恋愛・結婚",
+          "keywords": [
+            "遠距離",
+            "会えた",
+            "久しぶりに会",
+            "改札",
+            "再会"
+          ]
+        },
+        {
+          "name": "将来の話",
+          "description": "二人で先のことを話せた",
+          "example": "どんな家に住みたいか話しているだけで前向きになれた",
+          "sensitive": true,
+          "mute_theme": "恋愛・結婚",
+          "keywords": [
+            "将来の話",
+            "同棲",
+            "結婚",
+            "プロポーズ",
+            "これからの話"
+          ]
+        },
+        {
+          "name": "片思い・気になる人",
+          "description": "まだ付き合っていない好きな人とのやり取りや、その人のことで心が動いた",
+          "example": "好きな人とのLINEが続いて、通知が来るたびそわそわした",
+          "sensitive": true,
+          "mute_theme": "恋愛・結婚",
+          "keywords": [
+            "片思い",
+            "好きな人",
+            "気になる人",
+            "告白",
+            "ドキドキ",
+            "LINEが続",
+            "既読",
+            "目が合った",
+            "話せた"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "major": "人とのかかわり",
+      "name": "友人・仲間",
+      "subgenres": [
+        {
+          "name": "久しぶりの再会",
+          "description": "しばらく会っていない友人に会えた",
+          "example": "何年ぶりでも会えば一瞬で当時の空気に戻れた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "再会",
+            "久しぶり",
+            "旧友",
+            "同窓",
+            "会えた",
+            "変わらない"
+          ]
+        },
+        {
+          "name": "長電話",
+          "description": "友人と時間を忘れて話した",
+          "example": "近況報告のはずが気づいたら2時間も話していた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "長電話",
+            "電話",
+            "通話",
+            "ビデオ通話",
+            "話し込んだ"
+          ]
+        },
+        {
+          "name": "一緒にごはん",
+          "description": "友人と食事をして楽しかった",
+          "example": "取り分けながら食べる鍋の時間がいちばん落ち着く",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "一緒にごはん",
+            "飲み会",
+            "ランチ会",
+            "持ち寄り",
+            "鍋"
+          ]
+        },
+        {
+          "name": "悩みを聞いてもらった",
+          "description": "話を聞いてもらって楽になった",
+          "example": "うまく言えなかったのに「わかるよ」と言ってもらえた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "悩み",
+            "聞いてもらった",
+            "相談",
+            "話を聞いて",
+            "受け止めて"
+          ]
+        },
+        {
+          "name": "気の置けない時間",
+          "description": "遠慮のいらない相手とくつろいだ",
+          "example": "沈黙が気まずくない相手といる時間はそれだけで休息だ",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "気の置けない",
+            "遠慮のいらない",
+            "気楽",
+            "素でいられる",
+            "居心地"
+          ]
+        },
+        {
+          "name": "オンラインの交流",
+          "description": "SNSやチャット、通話など画面越しのやり取りが心地よかった",
+          "example": "グループのやり取りが盛り上がって、移動時間があっという間だった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "SNS",
+            "グループチャット",
+            "DM",
+            "オンライン",
+            "通話",
+            "リプ",
+            "やり取りが弾",
+            "スタンプ",
+            "チャット"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "major": "人とのかかわり",
+      "name": "親切・つながり",
+      "subgenres": [
+        {
+          "name": "席をゆずる/ゆずられる",
+          "description": "電車やバスで親切のやり取りがあった",
+          "example": "席をゆずったら「ありがとう」と何度も会釈された",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "席をゆず",
+            "席を譲",
+            "優先席",
+            "どうぞ",
+            "会釈"
+          ]
+        },
+        {
+          "name": "道案内",
+          "description": "道を教えたり教わったりした",
+          "example": "迷っていたら地元の人がわざわざ角まで一緒に来てくれた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "道案内",
+            "道を教え",
+            "迷っていたら",
+            "案内してくれた",
+            "地図を見せ"
+          ]
+        },
+        {
+          "name": "店員さんとの会話",
+          "description": "お店の人とのやり取りが心地よかった",
+          "example": "パン屋のおばあさんが「今日はいい天気ね」と笑った",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "店員さん",
+            "レジで",
+            "常連",
+            "おまけしてくれた",
+            "声をかけて"
+          ]
+        },
+        {
+          "name": "見知らぬ人の優しさ",
+          "description": "知らない人に助けられた",
+          "example": "落とした手袋を走って追いかけて届けてくれた人がいた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "見知らぬ人",
+            "知らない人",
+            "親切にされた",
+            "助けてくれた",
+            "拾ってくれた"
+          ]
+        },
+        {
+          "name": "ボランティア",
+          "description": "誰かのために動いて充実した",
+          "example": "地域の清掃に参加したら顔見知りが増えて挨拶が増えた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ボランティア",
+            "清掃活動",
+            "手伝い",
+            "支援",
+            "寄付",
+            "地域の"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "major": "自分・前進",
+      "name": "仕事・勉強",
+      "subgenres": [
+        {
+          "name": "プロジェクト完了",
+          "description": "仕事や課題をやり切った",
+          "example": "半年動かしてきた案件がようやく形になって世に出た",
+          "sensitive": true,
+          "mute_theme": "仕事・昇進",
+          "keywords": [
+            "プロジェクト",
+            "納品",
+            "リリース",
+            "案件",
+            "完了",
+            "やり切った"
+          ]
+        },
+        {
+          "name": "職場の人間関係",
+          "description": "職場の誰かとの関係で救われた",
+          "example": "行き詰まっていたら先輩がさらっと助け舟を出してくれた",
+          "sensitive": true,
+          "mute_theme": "仕事・昇進",
+          "keywords": [
+            "職場",
+            "同僚",
+            "上司",
+            "先輩",
+            "チーム",
+            "助けてもらった"
+          ]
+        },
+        {
+          "name": "昇進・評価",
+          "description": "仕事の成果が認められた",
+          "example": "面談で努力を具体的に挙げて評価してもらえた",
+          "sensitive": true,
+          "mute_theme": "仕事・昇進",
+          "keywords": [
+            "昇進",
+            "評価",
+            "昇給",
+            "表彰",
+            "認められた",
+            "面談"
+          ]
+        },
+        {
+          "name": "学びが仕事に活きた",
+          "description": "勉強したことが役に立った",
+          "example": "独学していた関数が今日の作業を一気に短くしてくれた",
+          "sensitive": true,
+          "mute_theme": "仕事・昇進",
+          "keywords": [
+            "学びが活きた",
+            "役に立った",
+            "勉強したこと",
+            "スキル",
+            "身についた"
+          ]
+        },
+        {
+          "name": "定時で帰れた",
+          "description": "仕事を切り上げて時間ができた",
+          "example": "きりよく終わらせて明るいうちに帰れたのが嬉しい",
+          "sensitive": true,
+          "mute_theme": "仕事・昇進",
+          "keywords": [
+            "定時",
+            "早上がり",
+            "残業なし",
+            "切り上げ",
+            "定時退社"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "major": "自分・前進",
+      "name": "健康・運動",
+      "subgenres": [
+        {
+          "name": "ランニング",
+          "description": "走って気持ちよかった",
+          "example": "朝ランで折り返しの橋まで行けた日は一日機嫌がいい",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ランニング",
+            "ジョギング",
+            "朝ラン",
+            "走った",
+            "ペース",
+            "完走"
+          ]
+        },
+        {
+          "name": "筋トレ",
+          "description": "体を鍛えて充実した",
+          "example": "先週きつかった重さが今日は3回多く挙がった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "筋トレ",
+            "トレーニング",
+            "スクワット",
+            "ジム",
+            "腹筋",
+            "負荷"
+          ]
+        },
+        {
+          "name": "体調が整う",
+          "description": "体の調子がよくなった",
+          "example": "早寝を続けたら朝の目覚めがずいぶん楽になった",
+          "sensitive": true,
+          "mute_theme": "病気・介護",
+          "keywords": [
+            "体調",
+            "整った",
+            "コンディション",
+            "だるさが取れた",
+            "回復"
+          ]
+        },
+        {
+          "name": "ヨガ・ストレッチ",
+          "description": "体をゆるめて心も落ち着いた",
+          "example": "寝る前のヨガをしたら呼吸が深くなって眠りも深かった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ヨガ",
+            "ストレッチ",
+            "柔軟",
+            "呼吸",
+            "ポーズ",
+            "ほぐれた"
+          ]
+        },
+        {
+          "name": "健康診断の結果",
+          "description": "検査の数値が良くなった",
+          "example": "去年ひっかかった項目が今年は基準内に戻っていた",
+          "sensitive": true,
+          "mute_theme": "病気・介護",
+          "keywords": [
+            "健康診断",
+            "検査",
+            "数値",
+            "基準値",
+            "再検査なし",
+            "人間ドック"
+          ]
+        },
+        {
+          "name": "よく歩いた",
+          "description": "いつもより多く歩いた、歩数が伸びた",
+          "example": "遠回りして帰ったら一万歩を超えていて、なんだか誇らしかった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "歩いた",
+            "歩数",
+            "一万歩",
+            "たくさん歩",
+            "ウォーキング",
+            "階段を使",
+            "歩き回った"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "major": "自分・前進",
+      "name": "自分をほめる",
+      "subgenres": [
+        {
+          "name": "頑張った自分",
+          "description": "自分の努力を認められた",
+          "example": "できなかった日もあったけど、今週もちゃんと机に向かった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "頑張った",
+            "自分をほめ",
+            "えらい",
+            "よくやった",
+            "努力"
+          ]
+        },
+        {
+          "name": "続けられている",
+          "description": "習慣が続いていることを実感した",
+          "example": "気づけば白湯を飲む朝の習慣が一ヶ月続いていた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "続けられている",
+            "継続",
+            "習慣化",
+            "◯日目",
+            "三日坊主じゃない"
+          ]
+        },
+        {
+          "name": "勇気を出せた",
+          "description": "一歩踏み出す勇気が持てた",
+          "example": "ずっと言えなかったことを、今日はちゃんと言葉にできた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "勇気を出せた",
+            "思いきって",
+            "一歩踏み出",
+            "言えた",
+            "挑戦した"
+          ]
+        },
+        {
+          "name": "失敗を受け止めた",
+          "description": "うまくいかなくても前を向けた",
+          "example": "落ち込んだけど、原因を書き出して次はこうすると決めた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "失敗",
+            "受け止めた",
+            "切り替え",
+            "反省",
+            "次に活かす",
+            "落ち込んだけど"
+          ]
+        },
+        {
+          "name": "ごほうび",
+          "description": "自分にごほうびをあげた",
+          "example": "やり切ったので前から欲しかったペンを自分に買った",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ごほうび",
+            "自分へのご褒美",
+            "買った",
+            "労った",
+            "甘やかした"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "major": "自分・前進",
+      "name": "自由・ひとり時間",
+      "subgenres": [
+        {
+          "name": "ひとりカフェ",
+          "description": "ひとりでカフェの時間を楽しんだ",
+          "example": "窓際の席で誰にも邪魔されずに1時間ぼーっとした",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ひとりカフェ",
+            "カフェで",
+            "窓際",
+            "ひとりの時間",
+            "コーヒー片手"
+          ]
+        },
+        {
+          "name": "ソロ活",
+          "description": "ひとりの行動を満喫した",
+          "example": "ひとりで映画館に行ったら想像以上に身軽で楽しかった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "ソロ活",
+            "ひとりで",
+            "一人焼肉",
+            "ひとり映画",
+            "単独行動"
+          ]
+        },
+        {
+          "name": "予定のない休日",
+          "description": "何も入っていない一日を味わった",
+          "example": "予定を入れなかった日曜、時計を見ない贅沢を味わった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "予定のない",
+            "フリーな一日",
+            "まっさらな休日",
+            "オフ",
+            "空白の日"
+          ]
+        },
+        {
+          "name": "自分だけの時間",
+          "description": "誰にも使われない時間を持てた",
+          "example": "早朝、家族が起きる前の30分だけは完全に自分のものだ",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "自分だけの時間",
+            "自分時間",
+            "ひとりきり",
+            "誰にも邪魔されない"
+          ]
+        },
+        {
+          "name": "静かに過ごす",
+          "description": "刺激の少ない時間で回復した",
+          "example": "スマホを別の部屋に置いて、ただ座っている時間をとった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "静かに過ごす",
+            "デジタルデトックス",
+            "スマホを置いて",
+            "ぼんやり",
+            "沈黙"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "major": "自分・前進",
+      "name": "偶然・ラッキー",
+      "subgenres": [
+        {
+          "name": "信号が青続き",
+          "description": "移動がスムーズでついていた",
+          "example": "急いでいた日に限って信号が全部青でつながった",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "信号が青",
+            "青続き",
+            "スムーズ",
+            "ついてる",
+            "ラッキー"
+          ]
+        },
+        {
+          "name": "探し物が見つかった",
+          "description": "なくしたと思ったものが出てきた",
+          "example": "諦めていた鍵が上着のポケットから出てきて叫んだ",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "探し物",
+            "見つかった",
+            "なくしたと思った",
+            "出てきた",
+            "発見"
+          ]
+        },
+        {
+          "name": "タイミングが良かった",
+          "description": "ちょうどよく物事が運んだ",
+          "example": "ホームに着いた瞬間に電車が来て乗り換えも接続した",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "タイミング",
+            "ちょうど",
+            "間に合った",
+            "ぴったり",
+            "ジャストタイミング"
+          ]
+        },
+        {
+          "name": "おまけ・当選",
+          "description": "思いがけない当たりや特典があった",
+          "example": "レジのくじで一等が出て店員さんと一緒に驚いた",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "おまけ",
+            "当選",
+            "当たった",
+            "くじ",
+            "特典",
+            "プレゼント当選"
+          ]
+        },
+        {
+          "name": "久々の連絡",
+          "description": "思いがけず誰かから連絡が来た",
+          "example": "ちょうど思い出していた友人から偶然メッセージが来た",
+          "sensitive": false,
+          "mute_theme": null,
+          "keywords": [
+            "久々の連絡",
+            "急に連絡",
+            "思い出していたら",
+            "メッセージが来た",
+            "偶然連絡"
+          ]
+        }
+      ]
+    }
+  ]
+}

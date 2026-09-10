@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}書く — {{ APP_NAME }}{% endblock %}
+{% block page_title %}幸せを書く{% endblock %}
+{% block appbar_left %}<a class="appbar-icon" href="{{ url_for('home') }}" aria-label="閉じる">✕</a>{% endblock %}
+{% block appbar_right %}<span class="appbar-icon ghost">投稿する</span>{% endblock %}
+
+{% block body %}
+<form method="post" id="compose-form" class="compose-body">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+  <textarea id="body" name="body" class="compose-input" rows="5" maxlength="500"
+            placeholder="今日、どんな幸せがありましたか？" required>{{ body or "" }}</textarea>
+  <p class="compose-hint">URL・リンクは投稿できません。</p>
+
+  <div id="ai-preview" class="ai-preview">
+    <p class="ai-head"><span class="spark">❀</span>AIが推定したジャンル<span class="ai-mode">{{ classify_mode }}</span></p>
+    <div class="ai-box">
+      <p class="ai-hint" id="ai-hint">書きはじめると、AIがこの投稿の幸せのジャンルを提案します。</p>
+      <div class="tags" id="ai-tags"></div>
+      <p class="ai-pick-note" id="ai-pick-note" hidden>合わないものはタップで外せます（外したものは保存されません）。</p>
+    </div>
+  </div>
+  <input type="hidden" name="tags_json" id="tags-json" value="">
+  <input type="hidden" name="ai_body" id="ai-body" value="">
+
+  <button type="submit" class="btn-primary"><span class="btn-label">＋ 幸せを記録する</span><span class="btn-check">✓ 記録しました</span></button>
+</form>
+
+<p class="compose-note">この投稿が届く人数は決まっています。バズや急な拡散は起きません。数は表示されません。</p>
+{% endblock %}
+

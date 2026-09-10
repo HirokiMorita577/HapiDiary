@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "_post_card.html" import post_card with context %}
+{% block title %}記録 — {{ APP_NAME }}{% endblock %}
+{% block page_title %}記録アーカイブ{% endblock %}
+
+{% block body %}
+<section class="sec sec-plain page">
+  <div class="archive-head">
+    <span class="anon-avatar" aria-hidden="true"></span>
+    <div>
+      <div class="sec-label" style="margin:0"><span class="spark">❀</span>あなたの記録</div>
+      <p class="archive-sub">名前も顔もない、これまでの記録。</p>
+    </div>
+  </div>
+
+  {% if used_genres %}
+    <div class="filter-row">
+      <a href="{{ url_for('archive') }}" class="{{ 'on' if not active_genre }}">すべて</a>
+      {% for gr in used_genres %}
+        <a href="{{ url_for('archive', genre=gr.id) }}" class="{{ 'on' if active_genre == gr.id }}">{{ gr.name }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if posts %}
+    {% for p in posts %}{{ post_card(p) }}{% endfor %}
+  {% else %}
+    <p class="empty">まだ記録がありません。</p>
+  {% endif %}
+</section>
+{% endblock %}

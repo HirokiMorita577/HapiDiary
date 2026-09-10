@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}通知 — {{ APP_NAME }}{% endblock %}
+{% block page_title %}通知{% endblock %}
+
+{% block body %}
+<section class="sec sec-plain page">
+  <p class="page-lead">あなたの投稿に届いた「共感」「発見」です。数はあなただけに見えています。</p>
+
+  {% if feed %}
+    <ul class="notif-list">
+      {% for n in feed %}
+        <li class="notif-item{{ ' is-unseen' if n.unseen }}">
+          <p class="notif-body">{{ n.body }}</p>
+          <div class="notif-meta">
+            <span class="notif-counts">
+              {% if n.empathy %}<span class="rc-heart">♥ {{ n.empathy }}</span>{% endif %}
+              {% if n.empathy and n.discover %}<span class="sep">|</span>{% endif %}
+              {% if n.discover %}<span class="rc-disc">！ {{ n.discover }}</span>{% endif %}
+            </span>
+            <time class="notif-time">{{ n.latest | since }}</time>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="empty">まだ、しずかです。だれかに届いたら、ここに出ます。</p>
+  {% endif %}
+</section>
+{% endblock %}

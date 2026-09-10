@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}アカウント作成 — {{ APP_NAME }}{% endblock %}
+
+{% block page_title %}アカウント作成{% endblock %}
+
+{% block body %}
+<section class="sec sec-plain page">
+ <div class="auth">
+  <p class="auth-lead">
+    いま書いている記録を引き継いで、別の端末からも入れるようにします。<br>
+    ハピディアリーは完全匿名です。ユーザー名は<strong>ログインのためだけ</strong>に使い、
+    他の人に見えることも、投稿に結びつくこともありません。DBには暗号化して保存されます。
+  </p>
+
+  <form method="post" class="card form auth-form" autocomplete="off">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <label>ユーザー名（日本語または半角英数字と _ . -、2〜32文字）
+      <input type="text" name="username" required minlength="2" maxlength="32"
+             pattern="[A-Za-z0-9_.\-ぁ-ゖゝ-ゟァ-ヿ々㐀-䶿一-鿿豈-﫿ｦ-ﾟ]{2,32}"
+             autocapitalize="none" autocomplete="username" autofocus>
+      <span class="field-note">このユーザー名は画面には表示されません。ログイン時の本人確認だけに使います。</span>
+    </label>
+    <label>パスワード（8文字以上）
+      <input type="password" name="password" required minlength="8" autocomplete="new-password">
+    </label>
+    <label>パスワード（確認）
+      <input type="password" name="password2" required minlength="8" autocomplete="new-password">
+    </label>
+    <button type="submit" class="btn-primary" style="margin-top:16px">作成する</button>
+  </form>
+
+  <div class="auth-switch">
+    <p class="auth-switch-lead">すでにアカウントをお持ちの方</p>
+    <a href="{{ url_for('login') }}" class="btn-ghost btn-block">ログイン画面へ</a>
+  </div>
+ </div>
+</section>
+{% endblock %}

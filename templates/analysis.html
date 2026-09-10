@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}傾向 — {{ APP_NAME }}{% endblock %}
+{% block page_title %}分析・傾向{% endblock %}
+
+{% block body %}
+<section class="sec sec-mine">
+  <div class="sec-label"><span class="spark">❀</span>わたしの幸せの傾向</div>
+
+  <div class="period-tabs">
+    {% for key, meta in periods.items() %}
+      <a href="{{ url_for('analysis', period=key) }}" class="{{ 'on' if key == period }}">{{ meta[0] }}</a>
+    {% endfor %}
+  </div>
+
+  <div class="card">
+    <h2 class="card-h">{{ period_label }}のジャンル別内訳</h2>
+    {% if breakdown %}
+      <ul class="bars">
+        {% for row in breakdown %}
+          <li class="bar-row">
+            <span class="bar-label">{{ row.genre_name }}<span class="bar-major">{{ row.major }}</span></span>
+            <span class="bar-track"><span class="bar-fill" style="width: {{ row.pct }}%"></span></span>
+            <span class="bar-pct">{{ row.pct }}%</span>
+          </li>
+        {% endfor %}
+      </ul>
+      <p class="suggest-try" style="text-align:left;margin-top:10px">
+        最近よく感じている幸せ：<strong style="color:var(--cream-ink)">{{ breakdown[0].genre_name }}</strong>
+      </p>
+    {% else %}
+      <p class="empty">この期間の記録はまだありません。</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="sec sec-others">
+  <div class="sec-label"><span class="spark">❀</span>未来の幸せ提案</div>
+
+  <div class="card">
+    {% if suggestion %}
+      <p class="suggest-lead">あなたと似た傾向の人は、いまこんな幸せを感じています</p>
+      <p class="suggest-body">{{ suggestion['content'] }}</p>
+      {% if suggestion['feedback'] == '気になる' %}
+        <p class="suggest-fb">「気になる」で回答済み。しばらく置いておきます。</p>
+      {% else %}
+        <form method="post" action="{{ url_for('suggestion_feedback') }}" class="suggest-actions">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+          <input type="hidden" name="suggestion_id" value="{{ suggestion['id'] }}">
+          <button name="feedback" value="気になる" class="btn-ghost">気になる</button>
+          <button name="feedback" value="興味なし" class="btn-ghost">興味なし</button>
+        </form>
+      {% endif %}
+      <p class="suggest-try">「これ、やってみれば？」</p>
+      <p class="suggest-note">この提案は毎日は変わりません。試したり「興味なし」を選ぶと、次のものに切り替わります。</p>
+    {% else %}
+      <p class="empty">もう少し記録がたまると、似た傾向の人の幸せを提案できます。</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

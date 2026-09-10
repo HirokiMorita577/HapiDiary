@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}はじめに — {{ APP_NAME }}{% endblock %}
+
+{% block page_title %}ようこそ{% endblock %}
+
+{% block body %}
+<section class="sec sec-mine page">
+  <div class="sec-label"><span class="spark">❀</span>ようこそ、{{ APP_NAME }}へ</div>
+  <p class="page-lead">
+    ここは、完全匿名で「小さな幸せ」だけを記録し、分かち合う場所です。
+    名前も、顔も、フォロワー数も、いいねの数もありません。
+    あなたの投稿は、決まった人数にだけ届きます。バズも急な拡散も起きません。
+  </p>
+
+  <form method="post" class="card form">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <h2 class="form-h">共感したいジャンルを選ぶ</h2>
+    <p class="form-note">選んだジャンルに合う投稿だけが、タイムラインに表示されます（あとで設定から変えられます）。</p>
+
+    {% for major in majors %}
+      <fieldset class="genre-group">
+        <legend>{{ major }}</legend>
+        <div class="chips">
+          {% for g in genres if g.major == major %}
+            <label class="chip-check">
+              <input type="checkbox" name="genre" value="{{ g.id }}">
+              <span>{{ g.name }}</span>
+            </label>
+          {% endfor %}
+        </div>
+      </fieldset>
+    {% endfor %}
+
+    <h2 class="form-h">属性タグ（任意・匿名のまま保持されます）</h2>
+    <p class="form-note">傾向の分析にだけ使います。個人が特定される使い方はしません。</p>
+    <div class="row">
+      <label>年代
+        <select name="age_band">{% for a in age_bands %}<option>{{ a }}</option>{% endfor %}</select>
+      </label>
+      <label>暮らし
+        <select name="household">{% for h in households %}<option>{{ h }}</option>{% endfor %}</select>
+      </label>
+    </div>
+
+    <h2 class="form-h">ミュートするテーマ（任意）</h2>
+    <p class="form-note">分類とは別に、心理的に刺さりやすいテーマを表示しないようにできます。</p>
+    <div class="chips">
+      {% for t in mute_themes %}
+        <label class="chip-check">
+          <input type="checkbox" name="mute" value="{{ t }}"><span>{{ t }}</span>
+        </label>
+      {% endfor %}
+    </div>
+
+    <button type="submit" class="btn-primary" style="margin-top:18px">はじめる</button>
+  </form>
+
+  <p class="auth-alt">
+    以前アカウントを作った方は <a href="{{ url_for('login') }}">ログイン</a> すると記録に戻れます。
+  </p>
+</section>
+{% endblock %}

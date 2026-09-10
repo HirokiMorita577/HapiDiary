@@ -1,0 +1,23 @@
+app = "happidiary"
+primary_region = "nrt"   # 東京リージョン
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8080"
+  HAPIDIARY_DB = "/data/happidiary.db"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+# SQLite を永続化する場合（仕様書7.5）:
+#   fly volumes create happidiary_data --region nrt --size 1
+# その上で以下のマウントを有効にする。デプロイ確認だけならコメントのままでよい。
+[[mounts]]
+  source = "happidiary_data"
+  destination = "/data"

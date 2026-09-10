@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block title %}debug — {{ APP_NAME }}{% endblock %}
+{% block page_title %}debug{% endblock %}
+
+{% block body %}
+<section class="sec sec-plain page" style="font-size:13px">
+
+{% if not authed %}
+  <div class="auth">
+    <p class="auth-lead">分類の利用量・トークン概算を見るデバッグ画面です。</p>
+    <form method="post" class="card form auth-form" autocomplete="off">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <label>パスワード
+        <input type="password" name="password" required autofocus autocomplete="off">
+      </label>
+      <button type="submit" class="btn-primary" style="margin-top:14px">入る</button>
+    </form>
+  </div>
+{% else %}
+  {% set s = snap %}
+  <div class="card">
+    <h2 class="card-h">分類の状態</h2>
+    <table class="dbg">
+      <tr><th>いま使う方式</th><td><b>{{ s.mode }}</b>{% if s.embeddings_active %} <span style="color:var(--blue-ink)">（埋め込み有効）</span>{% endif %}</td></tr>
+      <tr><th>モデル</th><td>確定: {{ s.models.classify }} / プレビュー: {{ s.models.preview }}</td></tr>
+      <tr><th>APIキー設定</th><td>
+        GEMINI: {{ '✓' if s.api_keys.GEMINI else '—' }} /
+        VOYAGE: {{ '✓' if s.api_keys.VOYAGE else '—' }} /
+        ANTHROPIC: {{ '✓' if s.api_keys.ANTHROPIC else '—' }}
+      </td></tr>
+      <tr><th>埋め込みファイル</th><td>
+        {% if s.embeddings_file %}{{ s.embeddings_file.provider }} / {{ s.embeddings_file.model }} /
+          dim {{ s.embeddings_file.dim }} / {{ s.embeddings_file.count }}件{% else %}なし{% endif %}
+      </td></tr>
+      <tr><th>しきい値</th><td>min_score {{ s.embed_thresholds.min_score }} / keep_gap {{ s.embed_thresholds.keep_gap }}</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2 class="card-h">利用量（このDBの累計）</h2>
+    <table class="dbg">
+      <tr><th>分類の呼び出し</th><td>{{ s.totals.calls }} 回</td></tr>
+      <tr><th>外部API呼び出し</th><td>{{ s.totals.api_calls }} 回</td></tr>
+      <tr><th>推定トークン</th><td>約 {{ '{:,}'.format(s.totals.tokens_est) }}</td></tr>
+      <tr><th>方式別</th><td>
+        {% for k, v in s.totals.by_method.items() %}{{ k }}: {{ v }}　{% endfor %}
+      </td></tr>
+    </table>
+    <p style="margin:.6rem 0 0"><b>今日（{{ s.today.date }}）</b>：分類 {{ s.today.calls }} 回 ／ API {{ s.today.api_calls }} 回 ／ 推定 約 {{ '{:,}'.format(s.today.tokens_est) }} トークン</p>
+  </div>
+
+  <div class="card">
+    <h2 class="card-h">閲覧数</h2>
+    <table class="dbg">
+      <tr><th>累計ページビュー</th><td>{{ '{:,}'.format(s.pageviews.total) }}</td></tr>
+      <tr><th>今日のページビュー</th><td>{{ '{:,}'.format(s.pageviews.today_views) }}</td></tr>
+      <tr><th>今日の訪問者（セッション）</th><td>{{ '{:,}'.format(s.pageviews.today_visitors) }}</td></tr>
+      <tr><th>累計の訪問者（延べ日×人）</th><td>{{ '{:,}'.format(s.pageviews.visitors_total) }}</td></tr>
+      <tr><th>これまでの匿名ユーザー数</th><td>{{ '{:,}'.format(s.pageviews.users_total) }}</td></tr>
+      <tr><th>ページ別</th><td>
+        {% for k, v in s.pageviews.by_path.items() %}{{ k }}: {{ v }}　{% endfor %}
+      </td></tr>
+    </table>
+    <table class="dbg" style="margin-top:.6rem">
+      <tr><th>日付</th><th>PV</th><th>訪問者</th></tr>
+      {% for d in s.pageviews.days %}
+        <tr><td>{{ d.date }}</td><td>{{ d.views }}</td><td>{{ d.visitors }}</td></tr>
+      {% else %}
+        <tr><td colspan="3">まだ記録がありません</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div class="card">
+    <h2 class="card-h">日別（分類・直近14日）</h2>
+    <table class="dbg">
+      <tr><th>日付</th><th>分類</th><th>API</th><th>推定トークン</th></tr>
+      {% for d in s.days %}
+        <tr><td>{{ d.date }}</td><td>{{ d.calls }}</td><td>{{ d.api_calls }}</td><td>約 {{ '{:,}'.format(d.tokens_est) }}</td></tr>
+      {% else %}
+        <tr><td colspan="4">まだ記録がありません</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div class="card">
+    <h2 class="card-h">直近の分類</h2>
+    {% if s.last %}
+      <pre class="dbg-pre">{{ s.last | tojson(indent=2) }}</pre>
+    {% else %}<p>なし</p>{% endif %}
+    {% if s.last_error %}
+      <h3 style="font-size:13px;margin:.6rem 0 .2rem;color:var(--cream-ink)">直近のエラー</h3>
+      <pre class="dbg-pre">{{ s.last_error | tojson(indent=2) }}</pre>
+    {% endif %}
+  </div>
+
+  <div class="card">
+    <h2 class="card-h">Gemini 無料枠について</h2>
+    <p>{{ s.free_tier_note.gemini_embed }}</p>
+    <p>Google はリアルタイムの「残量」をAPIで公開していません。正確な使用状況は
+      <a href="https://aistudio.google.com/" target="_blank" rel="noopener">Google AI Studio</a> ／
+      <a href="https://ai.dev/rate-limit" target="_blank" rel="noopener">レート制限ページ</a> で確認してください。
+      この画面の数値は、このアプリが自前で数えた概算です。</p>
+  </div>
+
+  <div class="card">
+    <h2 class="card-h">分類をテスト</h2>
+    <form method="post">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <textarea name="test_text" rows="2" placeholder="分類したい文を入れて送信">{{ request.form.get('test_text','') }}</textarea>
+      <button type="submit" class="btn-ghost" style="margin-top:.5rem">分類する</button>
+    </form>
+    {% if tested %}
+      <pre class="dbg-pre" style="margin-top:.6rem">{{ tested | tojson(indent=2) }}</pre>
+    {% endif %}
+  </div>
+
+  <form method="post" action="{{ url_for('debug_logout') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <button type="submit" class="btn-ghost">デバッグを閉じる</button>
+  </form>
+{% endif %}
+
+</section>
+
+<style>
+  table.dbg { width:100%; border-collapse:collapse; }
+  table.dbg th, table.dbg td { text-align:left; padding:4px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.dbg th { color:var(--ink-soft); font-weight:500; white-space:nowrap; }
+  .dbg-pre { background:#f5f6f8; border-radius:8px; padding:10px; overflow-x:auto; font-size:11.5px; line-height:1.5; }
+</style>
+{% endblock %}

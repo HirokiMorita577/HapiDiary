@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}ログイン — {{ APP_NAME }}{% endblock %}
+
+{% block page_title %}ログイン{% endblock %}
+
+{% block body %}
+<section class="sec sec-plain page">
+ <div class="auth">
+  <p class="auth-lead">
+    別の端末でも、同じ記録に戻れます。ユーザー名は他の人には一切表示されません。
+  </p>
+
+  <form method="post" class="card form auth-form" autocomplete="off">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <label>ユーザー名
+      <input type="text" name="username" value="{{ username or '' }}" required
+             autocapitalize="none" autocomplete="username" autofocus>
+    </label>
+    <label>パスワード
+      <input type="password" name="password" required autocomplete="current-password">
+    </label>
+    <button type="submit" class="btn-primary" style="margin-top:16px">ログイン</button>
+  </form>
+
+  <div class="auth-switch">
+    <p class="auth-switch-lead">アカウントをお持ちでない方</p>
+    <a href="{{ url_for('signup') }}" class="btn-ghost btn-block">新しくアカウントを作成</a>
+    <p class="auth-switch-note">匿名のまま使い続けることもできます。</p>
+  </div>
+ </div>
+</section>
+{% endblock %}

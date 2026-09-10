@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% from "_post_card.html" import post_card with context %}
+{% block title %}ホーム — {{ APP_NAME }}{% endblock %}
+
+{% block body %}
+  {% if unseen_notif %}
+    <div class="flashes">
+      <a class="flash flash-ok notif-banner" href="{{ url_for('notifications') }}">
+        あなたの投稿に、新しい共感・発見が{{ unseen_notif }}件あります <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  {% endif %}
+
+  <section class="sec sec-mine">
+    <div class="sec-label"><span class="spark">❀</span>わたしの幸せ</div>
+
+    {% if stats and stats.posts_total %}
+      {% if stats.streak >= 2 %}
+        <div class="streak streak-on{{ ' streak-big' if stats.streak >= 7 }}{{ ' streak-epic' if stats.streak >= 30 }}{{ ' celebrate' if just_posted }}">
+          <span class="streak-flame" aria-hidden="true">🔥</span>
+          <span class="streak-main"><span class="streak-num">{{ stats.streak }}</span><span class="streak-unit">日連続</span>で記録中</span>
+          <span class="streak-sub">これまで {{ stats.total_days }}日 / {{ stats.posts_total }}件</span>
+          <span class="streak-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        </div>
+      {% else %}
+        <div class="streak">
+          {% if stats.streak == 1 %}
+            <span class="streak-check" aria-hidden="true">✓</span>今日、記録しました
+          {% else %}
+            <span class="streak-dim">今日はまだ未記録</span>{% if stats.best >= 2 %} ・ 最長 {{ stats.best }}日連続{% endif %}
+          {% endif %}
+          <span class="streak-sub">これまで {{ stats.total_days }}日 / {{ stats.posts_total }}件</span>
+        </div>
+      {% endif %}
+    {% endif %}
+
+    {% if resurfaced %}
+      <p class="sec-note">{{ resurfaced.created_at | since }}のあなたの投稿です。</p>
+      {{ post_card(resurfaced) }}
+    {% endif %}
+
+    {% if own_posts %}
+      {% for p in own_posts %}{{ post_card(p, new=(loop.first and just_posted)) }}{% endfor %}
+    {% else %}
+      <p class="empty">まだ何も記録していません。今日の小さな幸せを、ひとつ。</p>
+    {% endif %}
+
+    <div class="cta-row">
+      <a class="btn-primary" href="{{ url_for('post') }}"><span>＋</span> 幸せを書く</a>
+    </div>
+  </section>
+
+  <div class="sec-divider">❀</div>
+
+  <section class="sec sec-others">
+    <div class="sec-label"><span class="spark">❀</span>どこかの誰かの幸せ</div>
+
+    {% if timeline %}
+      <p class="sec-note">今日、あなたのところへ届いた投稿。順番に意味はありません。</p>
+      {% for p in timeline %}{{ post_card(p, reactable=True) }}{% endfor %}
+    {% else %}
+      <p class="empty">今日ぶんの表示は終わりました。設定で共感したいジャンルを増やすと、また出会えます。</p>
+    {% endif %}
+  </section>
+{% endblock %}

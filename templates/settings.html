@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}設定 — {{ APP_NAME }}{% endblock %}
+
+{% block page_title %}設定{% endblock %}
+
+{% block body %}
+<section class="sec sec-plain page">
+  <form method="post" class="card form">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <h2 class="form-h">読みたい設定</h2>
+    <p class="form-note">ジャンルごとに「よく見たい／普通／少なめ／見ない」を選べます。「見ない」以外がタイムラインに表示されます。</p>
+
+    {% for major in majors %}
+      <fieldset class="genre-group">
+        <legend>{{ major }}</legend>
+        {% for g in genres if g.major == major %}
+          {% set cur = prefs.get(g.id, '見ない') %}
+          <div class="strength-row">
+            <span class="strength-name">{{ g.name }}</span>
+            <span class="strength-opts">
+              {% for s in strengths %}
+                <label class="radio">
+                  <input type="radio" name="strength_{{ g.id }}" value="{{ s }}" {{ 'checked' if s == cur }}>
+                  <span>{{ s }}</span>
+                </label>
+              {% endfor %}
+            </span>
+          </div>
+        {% endfor %}
+      </fieldset>
+    {% endfor %}
+
+    <h2 class="form-h">ミュート設定</h2>
+    <p class="form-note">分類とは別軸で、刺さりやすいテーマを表示しないようにします。</p>
+    <div class="chips">
+      {% for t in mute_themes %}
+        <label class="chip-check">
+          <input type="checkbox" name="mute" value="{{ t }}" {{ 'checked' if t in mutes }}><span>{{ t }}</span>
+        </label>
+      {% endfor %}
+    </div>
+
+    <h2 class="form-h">属性タグ（匿名のまま保持）</h2>
+    <div class="row">
+      <label>年代
+        <select name="age_band">{% for a in age_bands %}<option {{ 'selected' if a == attrs.get('age_band') }}>{{ a }}</option>{% endfor %}</select>
+      </label>
+      <label>暮らし
+        <select name="household">{% for h in households %}<option {{ 'selected' if h == attrs.get('household') }}>{{ h }}</option>{% endfor %}</select>
+      </label>
+    </div>
+
+    <button type="submit" class="btn-primary" style="margin-top:18px">保存する</button>
+  </form>
+
+  <div class="card form">
+    <h2 class="form-h">アカウント</h2>
+    {% if has_account %}
+      <p class="form-note">このブラウザはアカウントにログインしています。ユーザー名は誰にも表示されません。</p>
+      <form method="post" action="{{ url_for('change_password') }}" autocomplete="off">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <label>現在のパスワード
+          <input type="password" name="current_password" required autocomplete="current-password">
+        </label>
+        <label>新しいパスワード（8文字以上）
+          <input type="password" name="new_password" required minlength="8" autocomplete="new-password">
+        </label>
+        <label>新しいパスワード（確認）
+          <input type="password" name="new_password2" required minlength="8" autocomplete="new-password">
+        </label>
+        <button type="submit" class="btn-ghost" style="margin-top:14px">パスワードを変更</button>
+      </form>
+    {% else %}
+      <p class="form-note">
+        いまは匿名で使っています。<a href="{{ url_for('signup') }}">アカウントを作成</a>すると、
+        いまの記録を引き継いで別の端末からも入れます。
+        すでにアカウントがある場合は<a href="{{ url_for('login') }}">ログイン</a>してください。
+      </p>
+    {% endif %}
+  </div>
+
+  <p class="settings-foot"><a href="{{ url_for('reset_me') }}">このブラウザの匿名アカウントをリセットする</a></p>
+</section>
+{% endblock %}

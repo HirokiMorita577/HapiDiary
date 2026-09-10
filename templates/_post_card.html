@@ -1,0 +1,58 @@
+{% macro post_card(p, reactable=False, new=False) -%}
+<article class="post{{ ' post-new' if new }}" id="p{{ p.id }}">
+  <p class="post-body">{{ p.body }}</p>
+
+  {% if p.tags %}
+  <ul class="tags">
+    {% for t in p.tags %}
+      <li class="tag">{{ t.genre_name }}{% if t.subgenre_name %} <span class="tag-sub">/ {{ t.subgenre_name }}</span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <div class="post-foot">
+    <time>{{ p.created_at | since }}</time>
+
+    {% if p.own and p.own_counts is not none %}
+      {# 数値非表示の原則: 自分の投稿のみ、共感/発見だけを控えめに #}
+      <span class="own-react" style="margin-left:auto">
+        {% if p.own_counts['共感'] or p.own_counts['発見'] %}
+          {% if p.own_counts['共感'] %}<span class="rc-heart">♥ {{ p.own_counts['共感'] }}</span>{% endif %}
+          {% if p.own_counts['共感'] and p.own_counts['発見'] %}<span class="sep">|</span>{% endif %}
+          {% if p.own_counts['発見'] %}<span class="rc-disc">！ {{ p.own_counts['発見'] }}</span>{% endif %}
+        {% else %}
+          <span class="muted">まだ、しずかです</span>
+        {% endif %}
+      </span>
+    {% endif %}
+  </div>
+
+  {% if p.own %}
+    <form class="post-actions" method="post" action="{{ url_for('delete_post', post_id=p.id) }}"
+          data-confirm="この投稿を削除しますか？（元に戻せません）">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <input type="hidden" name="next" value="{{ request.path }}">
+      <button type="submit" class="post-del">削除</button>
+    </form>
+  {% endif %}
+
+  {% if reactable %}
+    {% set reacted = p.my_reactions | length > 0 %}
+    <form class="react-row{{ ' reacted' if reacted }}" method="post" action="{{ url_for('react', post_id=p.id) }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      {% set labels = [
+        ('共感', '共感', '♥', 'k-empathy'),
+        ('発見', '発見', '！', 'k-discover'),
+        ('今はちがう', '今はちがう', '☁', 'k-notnow'),
+        ('比べてしまう', '比べてしまう', '⚔', 'k-compare')
+      ] %}
+      {# リアクションは1投稿につき1つ。選んだものが強調され、いつでも別のものに変えられる。 #}
+      {% for kind, label, ico, cls in labels %}
+        <button type="submit" name="kind" value="{{ kind }}"
+                class="react-btn {{ cls }} {{ 'done' if kind in p.my_reactions }}"
+                ><span class="ico">{{ ico }}</span>{{ label }}</button>
+      {% endfor %}
+    </form>
+  {% endif %}
+</article>
+{%- endmacro %}

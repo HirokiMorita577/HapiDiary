@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ APP_NAME }}{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="app">
+    <header class="appbar">
+      {% block appbar_left %}
+        <a class="appbar-icon" href="{{ url_for('home') }}" aria-label="ホーム">❀</a>
+      {% endblock %}
+      <h1 class="appbar-title">{% block page_title %}{{ APP_NAME }}{% endblock %}</h1>
+      {% block appbar_right %}
+        <span class="appbar-actions">
+          <a class="appbar-icon has-badge" href="{{ url_for('notifications') }}" aria-label="通知{% if unseen_notif %}（{{ unseen_notif }}件）{% endif %}">
+            🔔{% if unseen_notif %}<span class="appbar-badge">{{ unseen_notif if unseen_notif < 100 else '99+' }}</span>{% endif %}
+          </a>
+          <a class="appbar-icon" href="{{ url_for('settings') }}" aria-label="設定">⚙</a>
+        </span>
+      {% endblock %}
+    </header>
+
+    <nav class="tabbar">
+      <a href="{{ url_for('home') }}" class="{{ 'on' if request.endpoint == 'home' }}">ホーム</a>
+      <a href="{{ url_for('post') }}" class="{{ 'on' if request.endpoint == 'post' }}">書く</a>
+      <a href="{{ url_for('analysis') }}" class="{{ 'on' if request.endpoint == 'analysis' }}">傾向</a>
+      <a href="{{ url_for('archive') }}" class="{{ 'on' if request.endpoint == 'archive' }}">記録</a>
+      {% if logged_in %}
+        <form method="post" action="{{ url_for('logout') }}" class="tab-logout">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+          <button type="submit">ログアウト</button>
+        </form>
+      {% else %}
+        <span class="tab-auth">
+          <a href="{{ url_for('login') }}" class="{{ 'on' if request.endpoint == 'login' }}">ログイン</a>
+          <a href="{{ url_for('signup') }}" class="tab-cta {{ 'on' if request.endpoint == 'signup' }}">新規登録</a>
+        </span>
+      {% endif %}
+    </nav>
+
+    {% with msgs = get_flashed_messages(with_categories=true) %}
+      {% if msgs %}
+        <div class="flashes">
+          {% for cat, m in msgs %}<p class="flash flash-{{ cat }}">{{ m }}</p>{% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <main>
+      {% block body %}{% endblock %}
+    </main>
+
+    <footer class="appfoot">
+      <p>小さな幸せを、比べずに。届く人数はみんな同じ。</p>
+    </footer>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

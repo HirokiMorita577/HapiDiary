@@ -1,0 +1,16 @@
+flask>=3.0
+gunicorn>=21.0
+python-dotenv>=1.0
+
+# 分類 (a) 埋め込み近傍検索。プロバイダはどちらか一方の鍵があれば動く。
+google-genai>=0.8      # Gemini（無料枠・カード不要）
+voyageai>=0.3          # Voyage AI
+
+# 分類 (b) LLM方式（任意・精度最優先モード）
+anthropic>=0.40
+
+# 分類 (c) キーワード方式の MeCab 原形化（任意）。
+# 辞書がメモリを食う（小さいサーバーだと OOM しうる）ので既定では使わない。
+# 使うなら:  pip install fugashi unidic-lite  ＋  環境変数 HAPIDIARY_USE_MECAB=1
+# fugashi>=1.3
+# unidic-lite>=1.0.8
